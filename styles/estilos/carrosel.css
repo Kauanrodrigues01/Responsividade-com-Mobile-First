@@ -93,3 +93,7 @@
     font-weight: 700;
     text-decoration: none;
 }
+
+.botões__ancora:hover{
+    background-color: #b47800;
+}

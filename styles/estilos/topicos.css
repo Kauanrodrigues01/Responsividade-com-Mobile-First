@@ -1,0 +1,50 @@
+:root {
+    --cor-de-fundo: #EBECEE;
+    --branco: #FFFFFF;
+    --laranja: #EB9B00;
+    --azul-degrade: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
+    --fonte-principal: "Poppins";
+    --azul: #002F52;
+    --fonte-secundario: "Josefin Sans";
+    --preto: #000000;
+    --cinza: #474646;
+    --cinza-claro: #858585;
+}
+
+.topicos{
+    background: var(--azul-degrade);
+    padding-bottom: 1.5em;
+}
+
+.topicos__titulo{
+    text-align: center;
+    color: var(--branco);
+    font-weight: 300;
+    padding: 1.5em 0;
+    font-family: var(--fonte-principal);
+}
+
+.topicos__lista{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 1em;
+    gap: 0.5em;
+}
+
+.topicos__item{
+    background-color: var(--laranja);
+    padding: 1rem;
+}
+
+.topicos__item:hover{
+    background-color: #b47800;
+}
+
+.topicos__link{
+    color: var(--branco);
+    text-decoration: none;
+    font-family: var(--fonte-principal);
+    font-weight: 700;
+    font-size: 14px;
+}
