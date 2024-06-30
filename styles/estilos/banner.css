@@ -1,0 +1,80 @@
+:root {
+    --cor-de-fundo: #EBECEE;
+    --branco: #FFFFFF;
+    --laranja: #EB9B00;
+    --azul-degrade: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
+    --fonte-principal: "Poppins";
+    --azul: #002F52;
+    --fonte-secundario: "Josefin Sans";
+    --preto: #000000;
+    --cinza: #474646;
+    --cinza-claro: #858585;
+}
+
+.banner{
+    font-family: var(--fonte-principal);
+    background: var(--azul-degrade);
+    color: var(--branco);
+    text-align: center;
+    padding: 2.5em 2em;
+}
+
+.banner__titulo{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.banner__texto{
+    padding: 1em 0;
+}
+
+.banner__pesquisa{
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 1em;
+    border-radius: 24px;
+    width: 100%;
+}
+
+.banner__pesquisa::placeholder{
+    color: white;
+    font-family: var(--fonte-principal);
+    font-size: 14px;
+    text-align: center;
+    background: url(../../imagens/Lupa.svg);
+    background-repeat: no-repeat;
+    background-position: 1em;
+}
+
+/* Remove o estilo padrão do botão de limpeza no Chrome, Safari, Edge, Opera */
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+/* Remove o estilo padrão do botão de limpeza no Firefox */
+input[type="search"]::-moz-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+/* Remove o estilo padrão do botão de limpeza no Edge */
+input[type="search"]::-ms-clear {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+/* Remove o estilo padrão do botão de limpeza no IE */
+input[type="search"]::-ms-reveal {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+/* Estiliza a borda do campo de pesquisa ao focar */
+.banner__pesquisa:focus {
+    outline: none; /* Remove o outline padrão do navegador */
+    border: 2px solid #ffffff; /* Exemplo de uma borda azul */
+}

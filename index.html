@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header class="cabeçalho">
+        <div class="container">
+            <input type="checkbox" id="menu" class="container__botao">
+            <label for="menu">
+                <span class="cabeçalho__menu-hamburguer container__imagem"></span>
+            </label>
+            <ul class="lista-menu">
+                <li class="lista-menu__titulo">Categorias</li>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Programação</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Front-end</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Infraestrutura</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Business</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Design & UX</a>
+                </li>
+            </ul>
+            <img src="imagens/Logo.svg" alt="Logo da AluraBooks" class="container__imagem">
+        </div>
+        <div class="container">
+            <a href="#"><img src="imagens/Favoritos.svg" alt="Favoritos" class="container__imagem"></a>
+            <a href="#"><img src="imagens/Compras.svg" alt="Meu carrinho" class="container__imagem"></a>
+            <a href="#"><img src="imagens/Usuario.svg" alt="Meu perfil" class="container__imagem"></a>
+        </div>
+    </header>
+
+    <section class="banner">
+        <h2 class="banner__titulo">Já sabe por onde começar?</h2>
+        <p class="banner__texto">Encontre em nossa estante o que precisa para seu desenvolvimento!</p>
+        <form>
+            <input type="search" placeholder="Qual será sua próxima leitura?" class="banner__pesquisa">
+        </form>
+    </section>
+
+    <section class="carrosel">
+        <h2 class="carrosel__titulo">NOVOS LANÇAMENTOS</h2>
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+
+            <!-- Slides -->
+            <div class="swiper-slide"><img src="imagens/ApacheKafka.svg" alt="Livro sobre apache kafka e spring boot da alura books"></div>
+            <div class="swiper-slide"><img src="imagens/Liderança.svg" alt="Livro sobre liderança em design da alura books"></div>
+            <div class="swiper-slide"><img src="imagens/Javascript.svg" alt="Livro sobre javascript assertivo da alurabooks"></div>
+            <div class="swiper-slide"><img src="imagens/Guia Front-end.svg" alt="Livro Guia front end"></div>
+            <div class="swiper-slide"><img src="imagens/Portugol.svg" alt="Livro sobre portugol"></div>
+            <div class="swiper-slide"><img src="imagens/Acessibilidade.svg" alt="Livro sobre acessibilidade"></div>
+            </div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // speed: 400,
+            spaceBetween: 15,
+
+            slidesPerView: 3,
+
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+            },
+
+            // autoplay: {
+            //     delay: 2500, // Tempo em milissegundos entre os slides
+            //     disableOnInteraction: false, // Continuar autoplay após interação do usuário
+            // },
+
+            // loop: true, // Loop infinito dos slides
+
+            // breakpoints: {
+            //     // when window width is >= 320px
+            //     320: {
+            //     slidesPerView: 1,
+            //     spaceBetween: 20
+            //     },
+            //     // when window width is >= 480px
+            //     480: {
+            //     slidesPerView: 2,
+            //     spaceBetween: 30
+            //     },
+            //     // when window width is >= 640px
+            //     640: {
+            //     slidesPerView: 3,
+            //     spaceBetween: 40
+            //     },
+
+            //     780: {
+            //     slidesPerView: 3,
+            //     spaceBetween: 40
+            //     }
+            // }   
+        });
+    </script>
+</body>
+</html>
