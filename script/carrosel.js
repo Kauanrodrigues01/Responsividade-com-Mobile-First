@@ -1,41 +1,65 @@
-const swiper = new Swiper('.swiper', {
-    // speed: 400,
-    spaceBetween: 15,
-
-    slidesPerView: 3,
-
-    pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
-    },
-
-    // autoplay: {
-    //     delay: 2500, // Tempo em milissegundos entre os slides
-    //     disableOnInteraction: false, // Continuar autoplay após interação do usuário
-    // },
-
-    // loop: true, // Loop infinito dos slides
-
-    // breakpoints: {
-    //     // when window width is >= 320px
-    //     320: {
-    //     slidesPerView: 1,
-    //     spaceBetween: 20
-    //     },
-    //     // when window width is >= 480px
-    //     480: {
-    //     slidesPerView: 2,
-    //     spaceBetween: 30
-    //     },
-    //     // when window width is >= 640px
-    //     640: {
-    //     slidesPerView: 3,
-    //     spaceBetween: 40
-    //     },
-
-    //     780: {
-    //     slidesPerView: 3,
-    //     spaceBetween: 40
-    //     }
-    // }   
-});
+function initializeSwiper() {
+    const screenWidth = window.innerWidth;
+    let swiperOptions;
+  
+    if (screenWidth < 1024) {
+      swiperOptions = {
+        mloop: true,
+        effect: 'coverflow', // Escolha do efeito
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 3,
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        scrollbar: {
+          el: '.swiper-scrollbar',
+          draggable: true,
+        },
+      };
+    } else if (screenWidth >= 1024) {
+      swiperOptions = {
+        spaceBetween: 10,
+        slidesPerView: 3,
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+        },
+        scrollbar: {
+            el: '.swiper-scrollbar',
+            draggable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+      };
+    }
+  
+    new Swiper('.swiper', swiperOptions);
+  }
+  
+  // Inicialize o Swiper na carga da página
+  initializeSwiper();
+  
+  // Atualize o Swiper ao redimensionar a janela
+  window.addEventListener('resize', () => {
+    document.querySelector('.swiper-container').swiper.destroy(true, true);
+    initializeSwiper();
+  });

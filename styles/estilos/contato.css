@@ -55,3 +55,21 @@
     outline: none; /* Remove o outline padrão do navegador */
     border: 1px solid var(--azul); /* Exemplo de uma borda azul */
 }
+
+@media (min-width: 1024px){
+    .contato{
+        padding: 3em 20vw;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 1em;
+    }
+
+    .contato__descrição{
+        max-width: 300px;
+    }
+
+    .contato form{
+        flex-grow: 1;
+    }
+}

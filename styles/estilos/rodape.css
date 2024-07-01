@@ -24,3 +24,50 @@ hr {
 .lista-rodapé {
     display: none;
 }
+
+.lista-rodapé{
+    display: none;
+}
+
+
+@media (min-width: 1024px){
+    .rodapé__titulo{
+        font-size: 24px;
+        white-space: nowrap;
+    }
+
+    .rodapé{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 5em;
+        padding: 3em 1em;
+    }
+
+    .lista-rodapé{
+        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 1em;
+    }
+
+    .lista-rodapé__titulo{
+        color: var(--cinza-claro);
+        padding-bottom: 1em;
+    }
+
+    .lista-rodapé__item{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0.5em;
+    }
+
+    .lista-rodapé__link{
+        color: var(--cinza);
+        text-decoration: none;
+        white-space: nowrap;
+    }
+}

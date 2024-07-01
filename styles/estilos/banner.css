@@ -78,3 +78,23 @@ input[type="search"]::-ms-reveal {
     outline: none; /* Remove o outline padrão do navegador */
     border: 2px solid #ffffff; /* Exemplo de uma borda azul */
 }
+
+@media(min-width: 1024px){
+    .banner{
+        min-height: 230px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+    .banner__titulo{
+        font-size: 36px;
+        font-weight: 700;
+    }
+    .banner__pesquisa{
+        width: 100%;
+        min-width: 450px;
+        padding: 1em 1.5em;
+    }
+}
