@@ -38,11 +38,11 @@
     padding-left: 1rem;
 }
 
-.cabeçalho .container:nth-child(2){
+.cabeçalho > .container:nth-child(3){
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 25px;
+    gap: 1em;
     padding-right: 1rem;
 }
 
@@ -89,4 +89,97 @@
 .lista-menu__link{
     color: var(--azul-degrade);
     text-decoration: none;
+}
+
+.container__titulo{
+    display: none;
+}
+
+.opções{
+    display: none;
+    position: relative;
+}
+
+.opções__botão{
+    display: none;
+}
+
+@media (min-width: 1024px){
+    .menu, .cabeçalho__menu-hamburguer{
+        display: none;
+    }
+
+    .container__titulo{
+        display: block;
+        color: #000;
+        font-family: var(--fonte-secundario);
+        font-size: 30px;
+        font-style: normal;
+        line-height: normal;
+        padding-top: 10px;
+    }
+
+    .container__titulo--negrito{
+        font-weight: 700;
+    }
+
+    .opções{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5em;
+        position: relative; /* "referencia" para o .lista-menu */
+    }
+
+    .lista-menu{
+        position: absolute;
+        top: 100%;
+    }
+
+    .opções__item{
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+
+    .opções__item:hover, .opções__item>a{
+        color: var(--azul);
+    }
+
+    .opções__link {
+        text-decoration: none;
+        color: var(--preto);
+    }
+
+    .opções__botão:checked ~ .lista-menu{
+        display: block;
+        width: auto;
+    }
+
+    .opções__botão:checked~.opções__rotulo>.opções__item {
+        background: var(--azul-degrade);
+        color: var(--branco);
+    }
+
+    .opções__item {
+        padding: 2em 1em;
+        font-family: var(--fonte-principal);
+    }
+
+    .lista-menu__item:hover {
+        background: var(--azul-degrade);
+    }
+
+    .lista-menu__item:hover>.lista-menu__link {
+        -webkit-text-fill-color: var(--branco);
+        text-decoration: none;
+    }
+
+    .cabeçalho .container:nth-child(3){
+        gap: 3em;
+        padding-right: 2em;
+    }
+
+    .container:nth-child(3) > :nth-child(1){
+        display: none;
+    }
 }
