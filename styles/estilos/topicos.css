@@ -62,12 +62,8 @@
     }
 
     .topicos__lista{
-        max-width: 100%;
+        max-width: 70%;
         gap: 1em;
-    }
-
-    .topicos__item{
-        padding: 1.7em 2.2em;
     }
 
     .topicos__link{
@@ -75,14 +71,7 @@
     }
 }
 
-@media (min-width: 1024px){
-    .topicos{
-        padding: 0 0 3em 0;
-    }
-
-    .topicos__titulo{
-        font-size: 32px;
-    }
+@media (min-width: 1728px){
 
     .topicos__lista{
         max-width: 60%;
