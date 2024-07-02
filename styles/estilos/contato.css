@@ -15,6 +15,7 @@
     background-color: var(--branco);
     padding: 1em;
     font-family: var(--fonte-principal);
+    text-align: center;
 }
 
 .contato__titulo,
@@ -41,6 +42,7 @@
     border-radius: 24px;
     width: 90%;
     color: var(--azul);
+    max-width: 400px;
 }
 
 .contato__email::placeholder {
@@ -61,8 +63,9 @@
         padding: 3em 20vw;
         display: flex;
         justify-content: center;
-        align-items: flex-start;
+        align-items: center;
         gap: 1em;
+        text-align: start;
     }
 
     .contato__descrição{
@@ -71,5 +74,20 @@
 
     .contato form{
         flex-grow: 1;
+        max-width: 400px;
+    }
+}
+
+@media (min-width: 1024px){
+    .contato{
+        padding: 3em 20vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+    }
+
+    .contato__titulo{
+        font-size: 24px;
     }
 }

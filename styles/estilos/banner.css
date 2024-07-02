@@ -98,3 +98,13 @@ input[type="search"]::-ms-reveal {
         padding: 1em 1.5em;
     }
 }
+
+@media(min-width: 1728px){
+    .banner{
+        gap: 0.5rem;
+    }
+    .banner__pesquisa{
+        min-width: 600px;
+        margin-top: 1em;
+    }
+}
